@@ -1,16 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JavaScript Workshop 1</title>
-</head>
-<body>
-  <script src="1-variables.js"></script>
-  <script src="2-math.js"></script>
-  <script src="3-string-functions.js"></script>
-  <script src="4-conditional-statements.js"></script>
-  <script src="5-boolean.js"></script>
-  <script src="6-functions.js"></script>  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Workshop 1</title>
+  </head>
+  <body>
+    <script>
+      // 1. Variables
+      let fruit = "Apple";
+      fruit = "Orange";
+
+      console.log("The fruit is", fruit);
+
+      // 2. Math
+      const age = 27;
+      console.log(age + 3.5);
+
+      const currentYear = 2024;
+      console.log(currentYear - 1969);
+
+      const myNum = 240;
+      const myNum1 = 65;
+      console.log(myNum / myNum1);
+
+      const myNumber = 0.2708;
+      const myNumber1 = 100;
+      console.log(myNumber * myNumber1);
+
+      // 3. String funcitons
+      console.log("Embla".toUpperCase());
+      console.log("   Remove whitespace   ".trim());
+      console.log("How many characters long is this string?".length);
+
+      // 4. Conditional Statements
+      const carSpeed = 85;
+      if (carSpeed > 100) {
+        console.log("Slow down!");
+      } else {
+        console.log("Carry on");
+      }
+
+      // 5. Boolean
+      const wordCount = 0;
+      if (wordCount === 0) {
+        console.log("Get writing!");
+      }
+
+      const currentTemperature = 15;
+      const goneForARun = false;
+      if (currentTemperature > 10 && goneForARun == false) {
+        console.log("Go for a run!");
+      }
+
+      const myNameLength = "Mary";
+      if (myNameLength.length > 10) {
+        console.log("You have a long name!");
+      } else if (myNameLength.length < 5) {
+        console.log("You have a short name!");
+      } else {
+        console.log("You have a medium length name!");
+      }
+
+      // 6. Functions
+      function printCurrentTime() {
+        const currentTime = new Date();
+        return currentTime.toLocaleTimeString();
+      }
+      console.log(printCurrentTime());
+
+      function printName(myName) {
+        console.log(myName + " " + myName);
+      }
+      const result = printName("Embla");
+
+      function printGreeting(greetName) {
+        console.log("Hello " + greetName);
+      }
+      let greetResult = printGreeting("Bob");
+      greetResult = printGreeting("Sue");
+
+      function multiply(multiplyNumber, multiplyNumber2) {
+        const value = multiplyNumber * multiplyNumber2;
+        console.log(value);
+        return value;
+      }
+      const first = multiply(2, 2);
+      const second = multiply(100, 4);
+      
+      function warmEnough(currentTemperature) {
+        currentTemperature > 10;
+        return true; 
+      }
+
+      if (warmEnough(15)) {
+        console.log("Go for a run!")
+      }
+    </script>
+  </body>
 </html>
